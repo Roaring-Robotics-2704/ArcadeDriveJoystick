@@ -11,6 +11,7 @@ public class DriveRobot extends CommandBase {
   /** Creates a new DriveRobot. */
   public DriveRobot() {
     // Use addRequirements() here to declare subsystem dependencies.
+    addRequirements(RobotContainer.m_driveTrain);
   }
 
   // Called when the command is initially scheduled.

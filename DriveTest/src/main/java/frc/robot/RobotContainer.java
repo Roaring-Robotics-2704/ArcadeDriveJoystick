@@ -33,8 +33,6 @@ public class RobotContainer {
   public static DriveRobot m_driveRobot = new DriveRobot();
 
   //OI Objects and Hardware
-  public static WPI_VictorSPX m_leftMotor = new WPI_VictorSPX(Constants.c_leftMotor);
-  public static WPI_VictorSPX m_rightMotor = new WPI_VictorSPX(Constants.c_rightMotor);
   public static Joystick m_stick = new Joystick(Constants.c_joystick);
   //public static XboxController m_controller = new XboxController(Constants.c_joystick);
 
@@ -42,6 +40,7 @@ public class RobotContainer {
   public RobotContainer() {
     // Configure the button bindings
     configureButtonBindings();
+    m_driveTrain.setDefaultCommand(m_driveRobot);
   }
 
   /**
