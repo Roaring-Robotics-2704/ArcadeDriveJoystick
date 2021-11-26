@@ -6,11 +6,13 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.RobotContainer;
+import frc.robot.Robot;
 
 public class DriveRobot extends CommandBase {
   /** Creates a new DriveRobot. */
   public DriveRobot() {
     // Use addRequirements() here to declare subsystem dependencies.
+    addRequirements(Robot.m_driveTrain);
   }
 
   // Called when the command is initially scheduled.
